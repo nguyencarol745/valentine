@@ -81,7 +81,56 @@ noBtn.onclick=move;
 /* yes pressed */
 function sayYes(){
   document.getElementById("result").innerHTML=
-    '<img id="valImg" src="valentine.jpg">';
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #ffe6e6;
+    }
+    #valImg {
+      margin-top: 20px;
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff4d4d;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff1a1a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Will You Be My Valentine?</h1>
+  <button onclick="sayYes()">Yes 💖</button>
+
+  <div id="result"></div>
+
+  <script>
+    function sayYes() {
+      // Make sure the file name matches exactly
+      document.getElementById("result").innerHTML =
+        '<img id="valImg" src="valentine.jpg" alt="Happy Valentine!">';
+    }
+  </script>
+
+</body>
+</html>
 
   setTimeout(()=>{
     document.getElementById("valImg").classList.add("show");
