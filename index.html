@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Be My Valentine</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #ffe3ec, #ffd2e3, #ffc0d6);
+      font-family: "Comic Sans MS", cursive;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-top: 120px;
+      font-size: 45px;
+      color: #ff2f6d;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      margin: 20px;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .yes { background:#ff2f6d;color:white; }
+    .no { background:#666;color:white;position:absolute; }
+
+    #result { font-size:28px;color:#ff2f6d;margin-top:40px;font-weight:bold; }
+  </style>
+</head>
+
+<body>
+
+<h1>Will you be my Valentine? 💖</h1>
+
+<button class="yes" onclick="sayYes()">YES</button>
+<button class="no" id="noBtn">NO</button>
+
+<div id="result"></div>
+
+<script>
+const noBtn=document.getElementById("noBtn");
+
+function move(){
+  noBtn.style.left=Math.random()*80+"vw";
+  noBtn.style.top=Math.random()*80+"vh";
+}
+noBtn.onmouseover=move;
+noBtn.onclick=move;
+
+function sayYes(){
+  document.getElementById("result").innerHTML=
+  "YAY 💕 YOU ARE NOW MY VALENTINE FOREVER";
+}
+</script>
+
+</body>
+</html>
